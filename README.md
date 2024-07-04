@@ -1,24 +1,12 @@
-# README
+# Rails guide: Getting started #
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This application consists in the first guide of Ruby on Rails website. This guide consists in the creation of a basic web application, explaining the following concepts:
+- Basic implementation of models, routes and controllers
+- Views with embedded ruby (*.erb)
+- Database migrations
+- Rails console, ActionRecord basic debugging
+- CRUD methods
+- Parameter validations
+- Entity relations between models
+- Concerns between models
+- Integrated Rails basic authentication
