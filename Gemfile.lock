@@ -204,6 +204,9 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    sorbet (0.5.11511)
+      sorbet-static (= 0.5.11511)
+    sorbet-static (0.5.11511-x86_64-linux)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -216,6 +219,8 @@ GEM
       railties (>= 6.0.0)
     stringio (3.1.1)
     strscan (3.1.0)
+    tailwindcss-rails (2.7.0-x86_64-linux)
+      railties (>= 7.0.0)
     thor (1.3.1)
     timeout (0.4.1)
     turbo-rails (2.0.6)
@@ -251,9 +256,11 @@ DEPENDENCIES
   rails (~> 7.1.3, >= 7.1.3.4)
   redis (>= 4.0.1)
   selenium-webdriver
+  sorbet
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
+  tailwindcss-rails
   turbo-rails
   tzinfo-data
   web-console
