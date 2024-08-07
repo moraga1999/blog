@@ -10,3 +10,7 @@ This application consists in the first guide of Ruby on Rails website. This guid
 - Entity relations between models
 - Concerns between models
 - Integrated Rails basic authentication
+  
+# Changes after end of guide #
+  - Removed basic authentication
+  - Installed tailwind CSS framework
