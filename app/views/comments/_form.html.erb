@@ -1,17 +1,20 @@
-<%= form_with model: [ @article, @article.comments.build ] do |form| %>
-    <p>
-        <%= form.label :commenter %><br>
-        <%= form.text_field :commenter %>
-    </p>
-    <p>
-        <%= form.label :body %><br>
-        <%= form.text_area :body %>
-    </p>
+<%= form_with model: [ @article, @article.comments.build ], class: "space-y-6 bg-white shadow-md rounded p-6" do |form| %>
+  <div class="space-y-2">
+    <%= form.label :commenter, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.text_field :commenter, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" %>
+  </div>
 
-    <p>
-        <%= form.label :status %><br>
-        <%= form.select :status, Visible::VALID_STATUSES, selected: "public" %>
-    <p>
-        <%= form.submit %>
-    </p>
+  <div class="space-y-2">
+    <%= form.label :body, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.text_area :body, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" %>
+  </div>
+
+  <div class="space-y-2">
+    <%= form.label :status, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.select :status, Visible::VALID_STATUSES, { selected: "public" }, class: "mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" %>
+  </div>
+
+  <div>
+    <%= form.submit "Submit", class: "inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" %>
+  </div>
 <% end %>

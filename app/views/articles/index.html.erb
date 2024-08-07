@@ -1,15 +1,21 @@
-<h1 class="text-3xl font-bold underline">
-    Articles
-</h1>
+<div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold underline mb-4">
+      Articles
+    </h1>
 
-Our blog has <%= Article.public_count %> articles!
-<ul>
-    <% @articles.each do |article| %> 
+    <p class="text-lg mb-6">
+      Our blog has <%= Article.public_count %> articles!
+    </p>
+
+    <ul class="list-disc pl-5 mb-6">
+      <% @articles.each do |article| %>
         <% unless article.archived? %>
-            <li>
-                <%= link_to article.title, article %>
-            </li>
+          <li class="mb-2">
+            <%= link_to article.title, article, class: "text-blue-500 hover:underline" %>
+          </li>
         <% end %>
-    <% end %>
-    <%= link_to "New Article", new_article_path %>
-</ul>
+      <% end %>
+    </ul>
+
+    <%= link_to "New Article", new_article_path, class: "inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700" %>
+</div>
